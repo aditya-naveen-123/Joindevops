@@ -1,7 +1,7 @@
 #!/bin/bash
 
-freind_1 = "Aditya"
-frined_2 = "Naveen"
+freind_1="Aditya"
+frined_2="Naveen"
 
 echo "$freind_1: How are you buddy"
 echo "$frined_2: Im good buddy"
