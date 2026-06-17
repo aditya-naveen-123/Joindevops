@@ -11,3 +11,4 @@ sleep 5 &
 echo "Background process ID : $!"
 echo "Line number of the script : $LINENO"
 echo "Script executed in : $SECONDS seconds"
+echo "Random number : $RANDOM"
