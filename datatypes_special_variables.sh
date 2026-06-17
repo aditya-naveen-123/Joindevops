@@ -5,4 +5,6 @@ PASSWORD="Naveen"
 AGE=27
 Gender="Male"
 
-echo "Varibales created are $@"
+echo "$USERNAME"
+
+echo "Varibales created are  $@"
