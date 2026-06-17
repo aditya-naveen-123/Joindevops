@@ -12,7 +12,7 @@ else
 fi
 
 
-USERNAME=$($USER)
+USERNAME=$(($USER))
 PACKAGE=$2
 echo "User name is : $USERNAME"
 USERID=$((id USERNAME))
