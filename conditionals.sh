@@ -23,9 +23,10 @@ else
 fi
 dnf list installed $2
 if [ $? -ne 0 ]; then
-    echo "Package already installed"
-    #dnf install $2
-elif [ $? -gt 0 ]; then
     echo "Installing the required application : $2"
     dnf install $2 -y
+    #dnf install $2
+elif [ $? -gt 0 ]; then
+ echo "Package already installed"
+   
 fi
