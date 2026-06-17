@@ -2,4 +2,4 @@
 
 MOVIES=("RRR" "Sing geetham" "Peddi" "OG")
 echo "Listed movies are: ${MOVIES[@]}"
-echo "First movie is : ${MOVIES[0]}
+echo "First movie is : ${MOVIES[0]}"
