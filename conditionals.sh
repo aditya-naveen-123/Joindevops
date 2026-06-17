@@ -17,7 +17,11 @@ PACKAGE=$2
 USERID=$((id -u))
 if [ $USERID -eq 0 ]; then
     echo "User is root user"
+    dnf list installed $2
+elif [ $? -ne 0 ]; then
+    echo "Instalaling $2"
     dnf install $2
 else
     echo "User is not root user, switch to root user and then execute this script again"
+    exit 1
 fi
