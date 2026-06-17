@@ -9,3 +9,4 @@ echo "User's home directory : $HOME"
 echo "process ID of the script: $$"
 sleep 5 &
 echo "Background process ID : $!"
+echo "Line number of the script : $LINENO"
