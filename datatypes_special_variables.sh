@@ -10,3 +10,4 @@ echo "process ID of the script: $$"
 sleep 5 &
 echo "Background process ID : $!"
 echo "Line number of the script : $LINENO"
+echo "Script executed in : $SECONDS seconds"
