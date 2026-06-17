@@ -12,10 +12,9 @@ else
 fi
 
 
-USERNAME=$(($USER))
+
 PACKAGE=$2
-echo "User name is : $USERNAME"
-USERID=$((id USERNAME))
+USERID=$((id -u))
 if [ $USERID -eq 0 ]; then
     echo "User is root user"
     dnf install $2
