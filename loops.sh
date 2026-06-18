@@ -1,5 +1,6 @@
 #!/bin/bash
-for i in {1..5}
+loop_variable=$@
+for i loop_variable
 do 
     echo $i
 done
