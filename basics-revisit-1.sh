@@ -13,3 +13,9 @@ echo "Command line varibales ====================="
 
 echo "User 1 is $NAME"
 echo "User 2 is $NAME2"
+
+echo "Please enter your password here : "
+
+read -s PASSWORD
+echo "The password you entered is $PASSWORD"
+
