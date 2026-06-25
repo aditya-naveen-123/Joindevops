@@ -22,4 +22,4 @@ echo "The password you entered is $PASSWORD"
 STARTTIME=$(date +%s)
 sleep 10
 ENDTIME=$(date +%s)
-echo "Execution time is (($ENDTIME-$STARTTIME)) "
+echo "Execution time is $(($ENDTIME-$STARTTIME)) "
