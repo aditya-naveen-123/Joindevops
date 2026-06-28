@@ -11,4 +11,5 @@ echo "Installing my SQL"
 dnf install mysql -y
  if [ $? -ne 0 ]; then
     echo "Package already exists"
+    exit 1
 fi
