@@ -12,16 +12,16 @@ fi
 # second argument -> exir code
 VALIDATE() {
     if [ $2 -ne 0 ]; then
-        echo "Installing $1 is failed"
+        echo "Installing $1 is failed" | tee -a $LOGS_FILE
         exit
     else
-        echo "Installing $1 is SUCESS"
+        echo "Installing $1 is SUCESS" | tee -a $LOGS_FILE
     fi
 }
 
 dnf list installed mysql &>> $LOGS_FILE
 if [ $? -eq 0 ]; then
-    echo "Package already exists"
+    echo "Package already exists" | tee -a $LOGS_FILE
     exit 1
 else
     echo "Installing MYSQL"
