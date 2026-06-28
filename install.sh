@@ -2,7 +2,12 @@
 USERID=$(id -u)
 
 if [ $USERID -eq 0 ]; then
-    echo "Root user is running script"
-else
-    echo "User is not root"
+    echo "Please run this script with root user"
+fi
+
+echo "Installing my SQL"
+
+dnf install mysql -y
+ if [ $? -ne 0 ]; then
+    echo "Package already exists"
 fi
