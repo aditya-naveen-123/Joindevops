@@ -1,7 +1,7 @@
 #!/bin/bash
+USERID=$(id -u)
 
-
-if [ $(($UID)) -eq 100 ]; then
+if [ $USERID -eq 0 ]; then
     echo "Root user is running script"
 else
     echo "User is not root"
