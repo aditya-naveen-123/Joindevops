@@ -1,5 +1,8 @@
 #!/bin/bash
 USERID=$(id -u)
+LOGS_DIR=/home/ec2-user/shell-logs
+LOGS_FILE="$LOGS_DIR/$0.log"
+
 if [ $USERID -ne 0 ]; then
     echo "Please run this script with root user"
     exit 1
@@ -16,12 +19,12 @@ VALIDATE() {
     fi
 }
 
-dnf list installed mysql
+dnf list installed mysql &>> $LOGS_FILE
 if [ $? -eq 0 ]; then
     echo "Package already exists"
     exit 1
 else
     echo "Installing MYSQL"
-    dnf install mysql -y
+    dnf install mysql -y &>> $LOGS_FILE
     VALIDATE MYSQL $?
 fi
