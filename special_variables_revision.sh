@@ -12,5 +12,5 @@ echo "PID of the background command : $!"
 echo "Line nummber of the script : $LINENO"
 echo "Execution time of the script : $SECONDS"
 echo " Generate random number : $RANDOM"
-echo "Exit code of the script : $?"
+echo "Exit code of the previous command : $?"
 
