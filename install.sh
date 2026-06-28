@@ -9,7 +9,7 @@ fi
 echo "Installing my SQL"
 
 dnf list installed mysql
- if [ $? -ne 0 ]; then
+ if [ $? -eq 0 ]; then
     echo "Package already exists"
     exit 1
 fi
