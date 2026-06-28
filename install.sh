@@ -9,7 +9,15 @@ fi
 echo "Installing my SQL"
 
 dnf list installed mysql
- if [ $? -eq 0 ]; then
+if [ $? -eq 0 ]; then
     echo "Package already exists"
     exit 1
+else
+    echo "Installing MYSQL"
+    dnf install mysql -y
+    if [ $? -ne 0 ]; then
+        echo "Installing MYSQL is failed"
+        exit
+    else
+        echo "Installing MYSQL is SUCESS"
 fi
