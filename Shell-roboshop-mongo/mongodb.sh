@@ -35,3 +35,9 @@ VALIDATE $? "Installing mongoDB"
 
 systemctl enable --now mongod 
 VALIDATE $? "Mongo DB Enabled "
+
+sed -i "s/127.0.0.1/0.0.0.0/g" /etc/mongod.conf
+VALIDATE $? "Updated traffic from all IPV4"
+
+systemctl restart mongod
+VALIDATE $? "Updated IP address so restrting mongodb"
