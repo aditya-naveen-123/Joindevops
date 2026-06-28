@@ -14,6 +14,6 @@ echo "Execution time of the script : $SECONDS"
 echo " Generate random number : $RANDOM"
 echo "Exit code of the previous command : $?"
 STRING1="Aditya"
-STRING2="Naveen"
-echo "Concatenated string is : $(($STRING1+$STRING2))"
+STRING1+="Naveen"
+echo "Concatenated string is : $STRING1"
 
