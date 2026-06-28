@@ -19,12 +19,16 @@ VALIDATE() {
     fi
 }
 
-dnf list installed mysql &>> $LOGS_FILE
-if [ $? -eq 0 ]; then
-    echo "Package already exists" | tee -a $LOGS_FILE
-    exit 1
-else
-    echo "Installing MYSQL"
-    dnf install mysql -y &>> $LOGS_FILE
-    VALIDATE MYSQL $?
-fi
+for package in $@
+do
+    dnf list installed $package &>> $LOGS_FILE
+    if [ $? -eq 0 ]; then
+        echo "$package already exists... SKIPPING" | tee -a $LOGS_FILE
+        exit 1
+    else
+        echo "Installing Package $package"
+        dnf install $package -y &>> $LOGS_FILE
+        VALIDATE $package $?
+    fi
+done
+
