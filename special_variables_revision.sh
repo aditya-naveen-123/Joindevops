@@ -7,7 +7,6 @@ echo "User running the script: $USER"
 echo "Use current wotrking directory : $PWD"
 echo "USer home directory: $HOME"
 echo "Process intance ID of the ecript run : $$"
-sleep 5
 echo "PID of the background command : $!"
 echo "Line nummber of the script : $LINENO"
 echo "Execution time of the script : $SECONDS"
@@ -16,4 +15,6 @@ echo "Exit code of the previous command : $?"
 STRING1="Aditya"
 STRING1+="Naveen"
 echo "Concatenated string is : $STRING1"
+MOVIES=("Tholiprema" "Kushi" "Balu" "Attarintiki daredi" "OG")
+echo "All movies are: ${MOVIES[@]}"
 
